@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Kisan Network</string>
+    <string name="base_url">https://jsonplaceholder.typicode.com/</string>
+
+    <string name="permission_denied_by_system">Permission denied by system</string>
+    <string name="permission_denied">Permission denied</string>
+    <string name="ACCOUNT_SID" translatable="false">ACe5723251dbac8ed109a1777c93b8dab9</string>
+    <string name="AUTH_TOKEN" translatable="false">299e6d6aed8d7670edcbd5ea43afc2ba</string>
+    <string name="contacts">Contacts</string>
+    <string name="confirmation">Are you want sure to send OTP to +91 9810153260 this number?</string>
+    <string name="messages">Messages</string>
+    <string name="message">Message</string>
+    <string name="sms">SMS</string>
+    <string name="search">Search</string>
+    <string name="call">Call</string>
+    <string name="notification">Notification</string>
+    <string name="more_actions">More actions</string>
+    <string name="view_media">View media</string>
+    <string name="search_in_conversation">Search in conversation</string>
+    <string name="notifications">Notifications</string>
+    <string name="in_development">In Development</string>
+    <string name="dummy_phone_number">+91 9810153260</string>
+    <string name="no_data_found">No Data Found</string>
+    <string name="send_otp">Send OTP</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+</resources>

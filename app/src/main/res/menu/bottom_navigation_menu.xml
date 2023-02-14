@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bn_contacts"
+        android:enabled="true"
+        android:icon="@drawable/contact_24"
+        android:title="@string/contacts"/>
+    <item
+        android:id="@+id/bn_sms"
+        android:enabled="true"
+        android:icon="@drawable/sms_24"
+        android:title="@string/sms"/>
+</menu>

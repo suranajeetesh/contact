@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txt_SMS_title"
+            style="@style/ContactTitle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_60"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/messages"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edt_sms_search"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:hint="@string/search"
+            style="@style/ContactSearch"
+            android:background="@drawable/shape_search"
+            android:padding="@dimen/dp_10"
+            android:drawableLeft="@drawable/search_24"
+            android:drawablePadding="@dimen/dp_8"
+            android:layout_marginHorizontal="@dimen/dp_16"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="@dimen/dp_30"
+            app:layout_constraintTop_toBottomOf="@id/txt_SMS_title" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_sms"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0"
+            android:layout_marginTop="@dimen/dp_10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_sms_search"
+            tools:listitem="@layout/item_sms" />
+
+        <include
+            android:id="@+id/layout_no_data"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0"
+            android:visibility="gone"
+            layout="@layout/include_no_data"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_sms_search"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

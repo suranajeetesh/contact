@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="mData"
+            type="com.kishan.data.remote.model.response.contact.ContactResponse" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_home"
+        android:clickable="true"
+        android:focusable="true">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_4"
+            android:background="@drawable/default_ripple_round"
+            android:padding="@dimen/dp_20"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/arrow_back" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_4"
+            android:background="@drawable/default_ripple_round"
+            android:padding="@dimen/dp_20"
+            app:layout_constraintBottom_toBottomOf="@id/img_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/img_back"
+            app:srcCompat="@drawable/trailing_icon" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_contact_details"
+            android:layout_width="@dimen/dp_120"
+            android:layout_height="@dimen/dp_120"
+            android:layout_marginTop="@dimen/dp_64"
+            app:layout_constraintEnd_toEndOf="parent"
+            setProfile="@{mData.photo}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/txt_Contact_detail_title"
+            style="@style/ContactDetailsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_24"
+            android:text="@string/contacts"
+            setContactName="@{mData}"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@id/img_contact_details"
+            app:layout_constraintStart_toStartOf="@id/img_contact_details"
+            app:layout_constraintTop_toBottomOf="@id/img_contact_details" />
+
+        <TextView
+            android:id="@+id/txt_Contact_detail_number"
+            style="@style/ContactDetailsNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_16"
+            android:text="@string/dummy_phone_number"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@id/txt_Contact_detail_title"
+            app:layout_constraintStart_toStartOf="@id/txt_Contact_detail_title"
+            app:layout_constraintTop_toBottomOf="@id/txt_Contact_detail_title" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_32"
+            android:background="@drawable/shape_contact_detail"
+            android:padding="@dimen/dp_10"
+            app:layout_constraintEnd_toStartOf="@+id/img_call"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_Contact_detail_number"
+            app:srcCompat="@drawable/baseline_send_24" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_contact_detail"
+            android:padding="@dimen/dp_10"
+            app:layout_constraintBottom_toBottomOf="@id/img_edit"
+            app:layout_constraintEnd_toStartOf="@+id/img_notification"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@id/img_edit"
+            app:layout_constraintTop_toTopOf="@id/img_edit"
+            app:srcCompat="@drawable/call" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_contact_detail"
+            android:padding="@dimen/dp_10"
+            app:layout_constraintBottom_toBottomOf="@id/img_call"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@id/img_call"
+            app:layout_constraintTop_toTopOf="@id/img_call"
+            app:srcCompat="@drawable/notifications" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_message"
+            style="@style/ContactDetailsMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:text="@string/send_otp"
+            app:layout_constraintEnd_toEndOf="@+id/img_edit"
+            app:layout_constraintStart_toStartOf="@id/img_edit"
+            app:layout_constraintTop_toBottomOf="@id/img_edit" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_call"
+            style="@style/ContactDetailsMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/call"
+            app:layout_constraintEnd_toEndOf="@+id/img_call"
+            app:layout_constraintStart_toStartOf="@id/img_call"
+            android:layout_marginTop="@dimen/dp_8"
+            app:layout_constraintTop_toBottomOf="@id/img_call" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_notification"
+            style="@style/ContactDetailsMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/notification"
+            android:layout_marginTop="@dimen/dp_8"
+            app:layout_constraintEnd_toEndOf="@id/img_notification"
+            app:layout_constraintStart_toStartOf="@id/img_notification"
+            app:layout_constraintTop_toBottomOf="@id/img_notification" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_more_actions"
+            style="@style/ContactDetailsMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_18"
+            android:letterSpacing="0.01"
+            android:background="@drawable/default_ripple_square"
+            android:lineSpacingExtra="@dimen/dp_20"
+            android:text="@string/more_actions"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_message" />
+
+        <include
+            android:id="@+id/include_menu"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0"
+            layout="@layout/include_actions"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/dp_18"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_more_actions" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

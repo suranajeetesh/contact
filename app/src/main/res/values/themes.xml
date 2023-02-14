@@ -1,0 +1,95 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Basic" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" >?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="ContactName">
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:lineSpacingExtra">@dimen/sp_24</item>
+        <item name="android:textColor">@color/title</item>
+        <item name="android:letterSpacing">0.015</item>
+        <item name="fontFamily">@font/roboto</item>
+    </style>
+
+    <style name="ContactTitle">
+        <item name="android:textSize">@dimen/sp_24</item>
+        <item name="android:lineSpacingExtra">@dimen/sp_32</item>
+        <item name="android:textColor">@color/contact_name</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="confirmationBtn">
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:lineSpacingExtra">@dimen/sp_32</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="ContactDetailsTitle">
+        <item name="android:textSize">@dimen/sp_24</item>
+        <item name="android:textColor">@color/contact_name</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="ContactDetailsNumber">
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:lineSpacingExtra">@dimen/sp_20</item>
+        <item name="android:textColor">@color/search_text</item>
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:letterSpacing">0.015</item>
+    </style>
+
+    <style name="ContactDetailsMenu">
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:lineSpacingExtra">@dimen/sp_16</item>
+        <item name="android:textColor">@color/detail_menu</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="android:letterSpacing">0.015</item>
+    </style>
+
+    <style name="ContactAction">
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:lineSpacingExtra">@dimen/sp_24</item>
+        <item name="android:textColor">@color/contact_name</item>
+        <item name="android:letterSpacing">0.015</item>
+        <item name="fontFamily">@font/roboto</item>
+    </style>
+
+    <style name="ContactSearch">
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:lineSpacingExtra">@dimen/sp_24</item>
+        <item name="android:textColor">@color/search_text</item>
+        <item name="android:textColorHint">@color/search_text</item>
+        <item name="android:letterSpacing">0.015</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:imeOptions">actionDone</item>
+        <item name="fontFamily">@font/roboto</item>
+    </style>
+
+    <style name="SmsTime">
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:lineSpacingExtra">@dimen/sp_24</item>
+        <item name="android:textColor">@color/sms_time</item>
+        <item name="android:letterSpacing">0.015</item>
+        <item name="fontFamily">@font/roboto</item>
+    </style>
+
+    <style name="CustomBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
+    </style>
+
+    <style name="CustomBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+</resources>
